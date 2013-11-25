@@ -2,4 +2,4 @@
 
 require 'quorable'
 
-puts Quorable.feed(ARGV[0]).sample
+"https://www.quora.com/#{Quorable.feed(ARGV[0]).sample}"
