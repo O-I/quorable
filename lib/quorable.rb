@@ -10,8 +10,6 @@ module Quorable
     paths = doc.css('.question_link').map { |link| link['href'] }
   end
 
-  private
-
   def self.parameterize(topic)
     topic.split(' ').map(&:downcase).map(&:capitalize).join('-')
   end
