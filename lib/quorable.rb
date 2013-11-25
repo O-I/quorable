@@ -5,7 +5,7 @@ require 'pry'
 module Quorable
   BASE_URL = 'http://www.quora.com'
 
-  def feed(topic)
+  def self.feed(topic)
     doc = Nokogiri::HTML.parse(open("#{BASE_URL}/#{parameterize(topic)}"))
     paths = doc.css('.question_link').map { |link| link['href'] }
   end
