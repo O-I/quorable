@@ -7,10 +7,15 @@ module Quorable
 
   def self.feed(topic)
     doc = Nokogiri::HTML.parse(open("#{BASE_URL}/#{Quorable.parameterize(topic)}"))
-    paths = doc.css('.question_link').map { |link| link['href'] }
+    paths = doc.css('.question_link').map { |link| "#{BASE_URL}#{link['href']}" }
+    paths
   end
+
+  private
 
   def self.parameterize(topic)
     topic.split(' ').map(&:downcase).map(&:capitalize).join('-')
   end
 end
+
+p Quorable.feed('music')
