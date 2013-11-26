@@ -11,8 +11,8 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'rspec/core/rake_task'
-RSpec::Core::RakeTask.new(:spec)
+# require 'rspec/core/rake_task'
+# RSpec::Core::RakeTask.new(:spec)
 
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
