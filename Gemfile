@@ -16,5 +16,5 @@ group :test do
   gem 'webmock'
   gem 'simplecov'
   gem 'coveralls'
-  gem 'shouda-matchers'
+  gem 'shoulda-matchers'
 end
