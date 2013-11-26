@@ -17,5 +17,3 @@ module Quorable
     topic.split(' ').map(&:downcase).map(&:capitalize).join('-')
   end
 end
-
-p Quorable.feed('music')
