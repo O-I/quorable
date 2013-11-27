@@ -7,8 +7,7 @@ module Quorable
 
   def self.feed(topic)
     doc = Nokogiri::HTML.parse(open("#{URL}/#{Quorable.parameterize(topic)}"))
-    paths = doc.css('.question_link').map { |link| "#{URL}#{link['href']}" }
-    paths
+    doc.css('.question_link').map { |link| "#{URL}#{link['href']}" }
   end
 
   private
