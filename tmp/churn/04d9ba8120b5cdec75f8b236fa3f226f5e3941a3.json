@@ -1,0 +1,1 @@
+{"churn":{"changes":[{"file_path":"lib/quorable.rb","times_changed":10}],"class_churn":[],"method_churn":[],"changed_files":["bin/quera","spec/quorable_spec.rb"],"changed_classes":[],"changed_methods":[]}}
