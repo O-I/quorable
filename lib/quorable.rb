@@ -3,17 +3,17 @@ require 'nokogiri'
 require 'pry'
 
 module Quorable
-  BASE_URL = 'http://www.quora.com'
+  URL = 'http://www.quora.com'
 
   def self.feed(topic)
-    doc = Nokogiri::HTML.parse(open("#{BASE_URL}/#{Quorable.parameterize(topic)}"))
-    paths = doc.css('.question_link').map { |link| "#{BASE_URL}#{link['href']}" }
+    doc = Nokogiri::HTML.parse(open("#{URL}/#{Quorable.parameterize(topic)}"))
+    paths = doc.css('.question_link').map { |link| "#{URL}#{link['href']}" }
     paths
   end
 
   private
 
   def self.parameterize(topic)
-    topic.split(' ').map(&:downcase).map(&:capitalize).join('-')
+    topic.split.map(&:capitalize).join('-')
   end
 end
