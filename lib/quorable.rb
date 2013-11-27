@@ -8,7 +8,6 @@ module Quorable
   def self.feed(topic)
     doc = Nokogiri::HTML.parse(open("#{URL}/#{Quorable.parameterize(topic)}"))
     doc.css('.question_link').map { |link| "#{URL}#{link['href']}" }
-    binding.pry
   end
 
   private
@@ -17,5 +16,3 @@ module Quorable
     topic.split.map(&:capitalize).join('-')
   end
 end
-
-Quorable.feed('quantum mechanics')
