@@ -20,3 +20,6 @@ pkg
 
 # don't check-in .gem files
 *.gem
+
+# or tmp directories
+tmp/**/*
