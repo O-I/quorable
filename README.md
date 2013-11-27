@@ -1,4 +1,5 @@
 # quorable
+[![Build Status](https://travis-ci.org/O-I/quorable.png?branch=master)](https://travis-ci.org/O-I/quorable)
 
 quorable is a Ruby gem that aims to be the unofficial API for Quora. Under construction. Lots to build, a lot is broken, but the foundation is being laid. Feel free to pitch in.
 
