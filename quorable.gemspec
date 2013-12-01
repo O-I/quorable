@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rahul Hor\u{e9}"]
-  s.date = "2013-11-26"
+  s.date = "2013-12-01"
   s.description = "Still need to add some more functionality. Right now, all this does is get the 10 (or fewer) most recent paths for a given topic."
   s.email = "hore.rahul@gmail.com"
   s.executables = ["quera"]
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     ".rspec",
+    ".travis.yml",
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
@@ -30,6 +31,7 @@ Gem::Specification.new do |s|
     "bin/quera",
     "lib/quorable.rb",
     "quorable.gemspec",
+    "spec/fixtures/music.html",
     "spec/quorable_spec.rb",
     "spec/spec_helper.rb"
   ]
